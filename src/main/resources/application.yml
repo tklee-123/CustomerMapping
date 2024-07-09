@@ -4,8 +4,8 @@ spring:
   after:
     datasource:
       jdbc-url: jdbc:oracle:thin:@10.37.11.199:1539/ldsdb
-      username: ttsp
-      password: MbB!2023Sp
+      username: LPB_EKYC
+      password: oracle
       driver-class-name: oracle.jdbc.driver.OracleDriver
       hikari:
         minimum-idle: 1

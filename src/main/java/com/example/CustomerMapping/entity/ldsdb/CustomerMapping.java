@@ -1,4 +1,4 @@
-package com.example.CustomerMapping.after.entity;
+package com.example.CustomerMapping.entity.ldsdb;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -6,7 +6,6 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 
 import java.util.Date;
 
@@ -28,5 +27,8 @@ public class CustomerMapping {
     private String udf2;
     private String udf3;
     private String udf4;
+    private String udf5;
+    private String udf6;
+    private String udf7;
 
 }

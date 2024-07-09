@@ -1,8 +1,8 @@
-package com.example.CustomerMapping.before.controller;
+package com.example.CustomerMapping.controller;
 
 
-import com.example.CustomerMapping.before.entity.CustomerTest;
-import com.example.CustomerMapping.before.repo.CustomerTestRepo;
+import com.example.CustomerMapping.entity.viviet.CustomerTest;
+import com.example.CustomerMapping.repo.viviet.CustomerTestRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

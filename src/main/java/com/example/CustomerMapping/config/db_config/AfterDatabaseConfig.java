@@ -1,4 +1,4 @@
-package com.example.CustomerMapping.config;
+package com.example.CustomerMapping.config.db_config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -22,7 +22,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "afterEntityManagerFactory",
         transactionManagerRef = "afterTransactionManager",
-        basePackages = {"com.example.CustomerMapping.after.repo"} // Specify your repository package
+        basePackages = {"com.example.CustomerMapping.repo.ldsdb"} // Specify your repository package
 )
 public class AfterDatabaseConfig {
 
@@ -38,7 +38,7 @@ public class AfterDatabaseConfig {
     public LocalContainerEntityManagerFactoryBean afterEntityManagerFactory(@Qualifier("afterDataSource") DataSource afterDataSource) {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(afterDataSource);
-        em.setPackagesToScan(new String[]{"com.example.CustomerMapping.after.entity"}); // Specify your entity package
+        em.setPackagesToScan(new String[]{"com.example.CustomerMapping.entity.ldsdb"}); // Specify your entity package
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

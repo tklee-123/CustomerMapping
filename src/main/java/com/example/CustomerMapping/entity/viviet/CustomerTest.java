@@ -1,4 +1,4 @@
-package com.example.CustomerMapping.before.entity;
+package com.example.CustomerMapping.entity.viviet;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

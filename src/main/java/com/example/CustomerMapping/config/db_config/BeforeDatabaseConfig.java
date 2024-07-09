@@ -1,4 +1,4 @@
-package com.example.CustomerMapping.config;
+package com.example.CustomerMapping.config.db_config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -21,7 +21,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "beforeEntityManagerFactory",
         transactionManagerRef = "beforeTransactionManager",
-        basePackages = {"com.example.CustomerMapping.before.repo"} // Specify your repository package
+        basePackages = {"com.example.CustomerMapping.repo.viviet"} // Specify your repository package
 )
 public class BeforeDatabaseConfig {
 
@@ -35,7 +35,7 @@ public class BeforeDatabaseConfig {
     public LocalContainerEntityManagerFactoryBean beforeEntityManagerFactory(@Qualifier("beforeDataSource") DataSource beforeDataSource) {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(beforeDataSource);
-        em.setPackagesToScan(new String[]{"com.example.CustomerMapping.before.entity"}); // Specify your entity package
+        em.setPackagesToScan(new String[]{"com.example.CustomerMapping.entity.viviet"}); // Specify your entity package
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
